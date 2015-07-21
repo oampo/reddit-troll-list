@@ -1,0 +1,17 @@
+body {
+    color: #1E2835;
+    background-color: #F8F8F8;
+}
+
+
+h1 {
+    background-color: #1E2835;
+    color: #F8F8F8;
+    text-align: center;
+    margin: 0 0 1em 0;
+    padding: 1em;
+}
+
+table {
+    margin: 0 auto;
+}

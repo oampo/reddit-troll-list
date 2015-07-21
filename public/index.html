@@ -1,0 +1,30 @@
+<!doctype HTML>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure.css">
+<link rel="stylesheet" href="/css/index.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+<script src="/js/index.js"></script>
+
+<h1>Hateful Users</h1>
+
+<table class="pure-table" ng-app="redditusers" ng-controller="UserList">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subreddits</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>
+                {{ user.name }}
+            </td>
+            <td>
+                <span ng-repeat="subreddit in user.subreddits">
+                    /r/{{ subreddit.name }}{{$last ? '' : ', '}}
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
